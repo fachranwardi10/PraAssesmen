@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/navigation"
+    app:startDestination="@id/main">
+
+    <fragment
+        android:id="@+id/persegiPanjang"
+        android:name="com.d3if4201.praassesment.PersegiPanjang"
+        android:label="PersegiPanjang" >
+        <action
+            android:id="@+id/action_persegiPanjang_to_main"
+            app:destination="@id/main" />
+    </fragment>
+    <fragment
+        android:id="@+id/segitiga"
+        android:name="com.d3if4201.praassesment.Segitiga"
+        android:label="Segitiga" >
+        <action
+            android:id="@+id/action_segitiga_to_main"
+            app:destination="@id/main" />
+    </fragment>
+    <fragment
+        android:id="@+id/about"
+        android:name="com.d3if4201.praassesment.About"
+        android:label="About" >
+        <action
+            android:id="@+id/action_about_to_main2"
+            app:destination="@id/main" />
+    </fragment>
+    <fragment
+        android:id="@+id/main"
+        android:name="com.d3if4201.praassesment.Main"
+        android:label="Main" >
+        <action
+            android:id="@+id/action_main_to_persegiPanjang"
+            app:destination="@id/persegiPanjang" />
+        <action
+            android:id="@+id/action_main_to_segitiga"
+            app:destination="@id/segitiga" />
+        <action
+            android:id="@+id/action_main_to_about"
+            app:destination="@id/about" />
+    </fragment>
+</navigation>
